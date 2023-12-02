@@ -6,7 +6,7 @@ import data.networking.PortfolioService
 class PortfolioImpl(private val portfolioService: PortfolioService) : PortfolioRepository {
 
     // Method to fetch portfolio data for a specific user
-    override suspend fun getPortfolio(userId: String): Portfolio? {
+    override suspend fun getPortfolio(userId: String): Portfolio {
         // Implementation to fetch portfolio data from the service or database
         return portfolioService.fetchPortfolio(userId)
     }

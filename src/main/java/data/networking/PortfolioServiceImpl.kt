@@ -12,7 +12,7 @@ class PortfolioServiceImpl : PortfolioService {
         rate = 1.25
     )
 
-    override suspend fun fetchPortfolio(userId: String): Portfolio? {
+    override suspend fun fetchPortfolio(userId: String): Portfolio {
         // Simulate fetching portfolio by userId (ignoring the provided userId for simplicity)
         return hardcodedPortfolio
     }

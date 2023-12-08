@@ -2,11 +2,11 @@ package data.repositories
 
 import data.entities.Portfolio
 import data.networking.PortfolioService
-
+import kotlinx.coroutines.flow.Flow
 class PortfolioImpl(private val portfolioService: PortfolioService) : PortfolioRepository {
 
     // Method to fetch portfolio data for a specific user
-    override suspend fun getPortfolio(userId: String): Portfolio {
+    override fun getPortfolio(userId: String): Flow<Portfolio> {
         // Implementation to fetch portfolio data from the service or database
         return portfolioService.fetchPortfolio(userId)
     }

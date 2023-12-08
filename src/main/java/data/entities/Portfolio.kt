@@ -2,7 +2,8 @@ package data.entities
 
 class Portfolio(
     val userId: String,
-    val portfolioValue: Double,
-    val currency: String,
-    val rate: Double
+    var portfolioValue: Double,
+    var currency: String,
+    var increment: Double,
+    var rate: Double
 )
